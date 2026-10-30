@@ -24,7 +24,7 @@ pipeline {
             }
         }
 
-        stage('Compilation & Automated Testing new') {
+        stage('Compilation & Automated Testing new final one') {
             steps {
                 echo '⚙️ Compiling class layers and verifying test logic stability...'
                 bat 'mvn clean package'
@@ -40,7 +40,7 @@ pipeline {
 
     post {
         success {
-            echo '✅ CI Pipeline is completed flawlessly! Code stability confirmed.'
+            echo '✅ CI Pipeline is executed completed flawlessly! Code stability confirmed.'
         }
         failure {
             echo '❌ CI Pipeline broken. Check console logs for build failures or breaking test regressions.'
