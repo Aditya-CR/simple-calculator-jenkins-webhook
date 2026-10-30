@@ -40,10 +40,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ CI Pipeline is executed completed flawlessly! Code stability confirmed.'
+            echo '✅ CI Pipeline was executed completed flawlessly! Code stability confirmed.'
         }
         failure {
-            echo '❌ CI Pipeline broken. Check the console logs for build failures if any  or breaking test regressions.'
+            echo '❌ CI Pipeline broken. Check the console logs for build failures or breaking test regressions.'
         }
     }
 }
