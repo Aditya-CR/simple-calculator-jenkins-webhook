@@ -20,14 +20,14 @@ pipeline {
         stage('Static Verification') {
             steps {
                 echo '🔍 Checking Maven project layout rules...'
-                sh 'mvn validate'
+                bat 'mvn validate'
             }
         }
 
-        stage('Compilation & Automated Testing') {
+        stage('Compilation & Automated Testing new') {
             steps {
                 echo '⚙️ Compiling class layers and verifying test logic stability...'
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
             post {
                 always {
@@ -40,7 +40,7 @@ pipeline {
 
     post {
         success {
-            echo '✅ CI Pipeline completed flawlessly! Code stability confirmed.'
+            echo '✅ CI Pipeline is completed flawlessly! Code stability confirmed.'
         }
         failure {
             echo '❌ CI Pipeline broken. Check console logs for build failures or breaking test regressions.'
